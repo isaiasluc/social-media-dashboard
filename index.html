@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <!--Import Google Icon Font-->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.1/css/all.css" integrity="sha384-xxzQGERXS00kBmZW/6qxqJPyxW3UR0BPsL4c8ILaIWXva5kFi7TxkIIaMiKtqV1Q" crossorigin="anonymous">
+
+  <title>Social Media Dashboard</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+    #header {
+      margin-top: 20px;
+      display: flex;
+      justify-content: space-between;
+    }
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: hsl(230, 17%, 14%);
+    }
+    .container {
+      background-color: hsl(230, 17%, 14%);
+    }
+    .upper-text {
+      font-size: 28px;
+      font-weight: 700;
+      color: white;
+    }
+    .header-bot-text {
+      font-size: 12px;
+      color: hsl(228, 34%, 66%);
+      font-weight: 400;
+    }
+    
+    .darkmode {
+      margin-top:10px;
+      color: hsl(228, 34%, 66%);
+    }
+    .switch {
+      position: absolute;
+      margin-left: -9999px;
+      visibility: hidden;
+      
+    }
+
+    .switch + label {
+      display: block;
+      position: relative;
+      cursor: pointer;
+      outline: none;
+      user-select: none;
+      
+    }
+    .switch--shadow + label {
+      padding: 2px;
+      width: 60px;
+      height: 30px;
+      background-color: #dddddd;
+      border-radius: 60px;
+    }
+    .switch--shadow + label:before,
+    .switch--shadow + label:after {
+      display: block;
+      position: absolute;
+      top: 1px;
+      left: 1px;
+      bottom: 1px;
+      content: '';
+    }
+    .switch--shadow + label:before {
+      right: 1px;
+      background-color: #f1f1f1;
+      border-radius: 60px;
+      transition: all 0.4s;
+    }
+    .switch--shadow + label:after {
+      width: 30px;
+      background-color: #fff;
+      border-radius: 100%;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+      transition: all 0.4s;
+    }
+    .switch--shadow:checked + label:before {
+      background-color: #8ce196;
+    }
+    .switch--shadow:checked + label:after {
+      transform: translateX(30px);
+    }
+    .card {
+      background-color: hsl(228, 28%, 20%);
+    }
+    .card-title {
+      color: hsl(228, 34%, 66%);
+      text-align: center;
+    }
+    .card-center {
+      text-align: center;
+    }
+    .card-tiny-bottom {
+      text-align: center;
+      color: hsl(228, 34%, 66%);
+    }
+    .card-bottom {
+      text-align: center;
+      color: hsl(163, 72%, 41%);
+      padding: 10px;
+    }
+    #youtube {
+      color: hsl(356, 69%, 56%);
+    }
+    .top-card {
+      display: flex;
+      justify-content: space-between;
+      padding: 20px 20px 0px 20px;
+      font-size: 20px;
+      color: hsl(228, 34%, 66%);
+      align-items: center;
+    }
+    .bot-card {
+      display: flex;
+      justify-content: space-between;
+      padding: 20px 20px 10px 20px;
+      align-items: center;
+    }
+    .left-text-up {
+      font-size: 14px;
+    }
+    .left-text-down {
+      font-size: 30px;
+      color: white;
+      font-weight: 700;
+    }
+    .right-text-down {
+      color:hsl(163, 72%, 41%);
+      font-size: 14px;
+    }
+    .fa-facebook-square {
+      color: hsl(208, 92%, 53%);
+    }
+    .fa-twitter-square {
+      color: hsl(203, 89%, 53%);
+    }
+    .fa-instagram-square {
+      background: linear-gradient(hsl(37, 97%, 70%) to hsl(329, 70%, 58%) );
+    }
+    .negative {
+      color: hsl(356, 69%, 56%);
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="row ">
+        <div id="header" class="col s12 m12">
+          <div class="upper-text">Social Media Dashboard</div>
+          <div class="darkmode">
+            <input id="switch-shadow" class="switch switch--shadow" type="checkbox">Dark Mode</input>
+            <label for="switch-shadow"></label>
+          </div>
+        </div>
+        <div class="col s12 m12 header-bot-text">Total Followers: 23,004</div>
+      </div>
+    </header>
+    <main>
+      <div class="row">
+        <div class="col s12 m3">
+          <div class="card small">
+            <div class="card-content white-text">
+              <div class="card-title"><h6><i class="fab fa-facebook-square"></i> @nathanf</h6></div>
+              <div class="card-center"><h1>1987</h1></div>
+              <div class="card-tiny-bottom"><h6>F O L L O W E R S</h6></div>
+              <div class="card-bottom"><h6><i class="fas fa-sort-up"></i> 12 Today</h6></div>
+            </div>
+          </div>
+        </div>
+        <div class="col s12 m3">
+          <div class="card small">
+            <div class="card-content white-text">
+              <div class="card-title"><h6><i class="fab fa-twitter-square"></i> @nathanf</h6></div>
+              <div class="card-center"><h1>1044</h1></div>
+              <div class="card-tiny-bottom"><h6>F O L L O W E R S</h6></div>
+              <div class="card-bottom"><h6><i class="fas fa-sort-up"></i> 99 Today</h6></div>
+            </div>
+          </div>
+        </div>
+        <div class="col s12 m3">
+          <div class="card small">
+            <div class="card-content white-text">
+              <div class="card-title"><h6><i class="fab fa-instagram-square"></i> @realnathanf</h6></div>
+              <div class="card-center"><h1>11k</h1></div>
+              <div class="card-tiny-bottom"><h6>F O L L O W E R S</h6></div>
+              <div class="card-bottom"><h6><i class="fas fa-sort-up"></i> 1099 Today</h6></div>
+            </div>
+          </div>
+        </div>
+        <div class="col s12 m3">
+          <div class="card small">
+            <div class="card-content white-text">
+              <div class="card-title"><h6><i class="fab fa-youtube-square"></i> Nathan F.</h6></div>
+              <div class="card-center"><h1>8239</h1></div>
+              <div class="card-tiny-bottom"><h6>S U B S C R I B E R S</h6></div>
+              <div id="youtube" class="card-bottom"><h6><i class="fas fa-sort-down"></i> 144 Today</h6></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    
+    <div class="row">
+      <div class="col s12 m12 upper-text">
+        Overview - Today
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col s12 m3">
+        <div class="card">
+          <div class="top-card">
+            <div class="left-text-up">
+              Page Views
+            </div>
+            <div class="right-text-up">
+              <i class="fab fa-facebook-square"></i>
+            </div>
+          </div>
+          <div class="bot-card">
+            <div class="left-text-down">
+              87
+            </div>
+            <div class="right-text-down">
+              <i class="fas fa-sort-up"></i>3%
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="top-card">
+            <div class="left-text-up">
+              Retweets
+            </div>
+            <div class="right-text-up">
+              <i class="fab fa-twitter-square"></i>
+            </div>
+          </div>
+          <div class="bot-card">
+            <div class="left-text-down">
+              117
+            </div>
+            <div class="right-text-down">
+              <i class="fas fa-sort-up"></i>303%
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col s12 m3">
+        <div class="card">
+          <div class="top-card">
+            <div class="left-text-up">
+              Likes
+            </div>
+            <div class="right-text-up">
+              <i class="fab fa-facebook-square"></i>
+            </div>
+          </div>
+          <div class="bot-card">
+            <div class="left-text-down">
+              52
+            </div>
+            <div class="right-text-down negative">
+              <i class="fas fa-sort-down"></i>2%
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="top-card">
+            <div class="left-text-up">
+              Likes
+            </div>
+            <div class="right-text-up">
+              <i class="fab fa-twitter-square"></i>
+            </div>
+          </div>
+          <div class="bot-card">
+            <div class="left-text-down">
+              507
+            </div>
+            <div class="right-text-down">
+              <i class="fas fa-sort-up"></i>553%
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col s12 m3">
+        <div class="card">
+          <div class="top-card">
+            <div class="left-text-up">
+              Likes
+            </div>
+            <div class="right-text-up">
+              <i class="fab fa-instagram-square"></i>
+            </div>
+          </div>
+          <div class="bot-card">
+            <div class="left-text-down">
+              5462
+            </div>
+            <div class="right-text-down">
+              <i class="fas fa-sort-up"></i>2257%
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="top-card">
+            <div class="left-text-up">
+              Likes
+            </div>
+            <div class="right-text-up">
+              <i class="fab fa-youtube-square"></i>
+            </div>
+          </div>
+          <div class="bot-card">
+            <div class="left-text-down">
+              107
+            </div>
+            <div class="right-text-down negative">
+              <i class="fas fa-sort-down"></i>19%
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col s12 m3">
+        <div class="card">
+          <div class="top-card">
+            <div class="left-text-up">
+              Profile Views
+            </div>
+            <div class="right-text-up">
+              <i class="fab fa-instagram-square"></i>
+            </div>
+          </div>
+          <div class="bot-card">
+            <div class="left-text-down">
+              52k
+            </div>
+            <div class="right-text-down">
+              <i class="fas fa-sort-up"></i>1375%
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="top-card">
+            <div class="left-text-up">
+              Total Views
+            </div>
+            <div class="right-text-up">
+              <i class="fab fa-youtube-square"></i>
+            </div>
+          </div>
+          <div class="bot-card">
+            <div class="left-text-down">
+              1407
+            </div>
+            <div class="right-text-down negative">
+              <i class="fas fa-sort-down"></i>12%
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+  </div>
+  
+  
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="https://github.com/isaiasluc">Isaías Lucena</a>.
+  </div>
+  <script type="text/javascript" src="js/materialize.min.js"></script>
+</body>
+</html>
