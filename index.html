@@ -17,20 +17,10 @@
   <style>
     .attribution { font-size: 11px; text-align: center; }
     .attribution a { color: hsl(228, 45%, 44%); }
-    :root {
-      --primary-color: #302AE6;
-      --secondary-color: #536390;
-      --font-color: #424242;
-      --bg-color: #fff;
-      --heading-color: #292922;
-    }
 
-    [data-theme="dark"] {
-      --primary-color: #9A97F3;
-      --secondary-color: #818cab;
-      --font-color: #e1e1ff;
-      --bg-color: #161625;
-      --heading-color: #818cab;
+    .light-mode {
+      background-color: white;
+      color: black;
     }
 
     #header {
@@ -52,7 +42,7 @@
       border-top: solid 5px hsl(203, 89%, 53%);
     }
     #card-instagram {
-      border-top: solid 5px #f09433;
+      border-top: solid 5px hsl(37, 97%, 70%);
     }
     #card-youtube {
       border-top: solid 5px hsl(348, 97%, 39%);
@@ -92,6 +82,7 @@
       user-select: none;
       
     }
+    
     .switch--shadow + label {
       padding: 2px;
       width: 60px;
@@ -146,7 +137,7 @@
       color: hsl(163, 72%, 41%);
       padding: 10px;
     }
-    #youtube {
+    .youtube {
       color: hsl(356, 69%, 56%);
     }
     .top-card {
@@ -181,8 +172,8 @@
     .fa-twitter-square {
       color: hsl(203, 89%, 53%);
     }
-    .fa-instagram-square {
-      background: linear-gradient(hsl(37, 97%, 70%) to hsl(329, 70%, 58%) );
+    .fa-instagram {
+      color: hsl(37, 97%, 70%);
     }
     .negative {
       color: hsl(356, 69%, 56%);
@@ -196,7 +187,7 @@
         <div id="header" class="col s12 m12">
           <div class="upper-text">Social Media Dashboard</div>
           <div class="darkmode">
-            <input id="switch-shadow" class="switch switch--shadow" type="checkbox" />Dark Mode
+            <input id="switch-shadow" class="switch switch--shadow" type="checkbox" />Light Mode
             <label for="switch-shadow"></label>            
           </div>
         </div>
@@ -228,7 +219,7 @@
         <div class="col s12 m3">
           <div id="card-instagram" class="card small hoverable">
             <div class="card-content white-text">
-              <div class="card-title"><h6><i class="fab fa-instagram-square"></i> @realnathanf</h6></div>
+              <div class="card-title"><h6><i class="fab fa-instagram"></i> @realnathanf</h6></div>
               <div class="card-center"><h1>11k</h1></div>
               <div class="card-tiny-bottom"><h6>F O L L O W E R S</h6></div>
               <div class="card-bottom"><h6><i class="fas fa-sort-up"></i> 1099 Today</h6></div>
@@ -238,10 +229,10 @@
         <div class="col s12 m3">
           <div id="card-youtube" class="card small hoverable">
             <div class="card-content white-text">
-              <div class="card-title"><h6><i class="fab fa-youtube-square"></i> Nathan F.</h6></div>
+              <div class="card-title"><h6><i class="fab fa-youtube-square youtube"></i> Nathan F.</h6></div>
               <div class="card-center"><h1>8239</h1></div>
               <div class="card-tiny-bottom"><h6>S U B S C R I B E R S</h6></div>
-              <div id="youtube" class="card-bottom"><h6><i class="fas fa-sort-down"></i> 144 Today</h6></div>
+              <div class="card-bottom youtube"><h6><i class="fas fa-sort-down"></i> 144 Today</h6></div>
             </div>
           </div>
         </div>
@@ -340,7 +331,7 @@
               Likes
             </div>
             <div class="right-text-up">
-              <i class="fab fa-instagram-square"></i>
+              <i class="fab fa-instagram"></i>
             </div>
           </div>
           <div class="bot-card">
@@ -358,7 +349,7 @@
               Likes
             </div>
             <div class="right-text-up">
-              <i class="fab fa-youtube-square"></i>
+              <i class="fab fa-youtube-square youtube"></i>
             </div>
           </div>
           <div class="bot-card">
@@ -379,7 +370,7 @@
               Profile Views
             </div>
             <div class="right-text-up">
-              <i class="fab fa-instagram-square"></i>
+              <i class="fab fa-instagram"></i>
             </div>
           </div>
           <div class="bot-card">
@@ -397,7 +388,7 @@
               Total Views
             </div>
             <div class="right-text-up">
-              <i class="fab fa-youtube-square"></i>
+              <i class="fab fa-youtube-square youtube"></i>
             </div>
           </div>
           <div class="bot-card">
