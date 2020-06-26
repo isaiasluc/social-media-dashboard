@@ -17,19 +17,36 @@
   <style>
     .attribution { font-size: 11px; text-align: center; }
     .attribution a { color: hsl(228, 45%, 44%); }
+    :root {
+      --primary-color: #302AE6;
+      --secondary-color: #536390;
+      --font-color: #424242;
+      --bg-color: #fff;
+      --heading-color: #292922;
+    }
+
+    [data-theme="dark"] {
+      --primary-color: #9A97F3;
+      --secondary-color: #818cab;
+      --font-color: #e1e1ff;
+      --bg-color: #161625;
+      --heading-color: #818cab;
+    }
+
     #header {
       margin-top: 20px;
       display: flex;
       justify-content: space-between;
     }
     body {
+      background-color: var(--bg-color);
+      color: var(--font-color);
+
       font-family: 'Inter', sans-serif;
       background-color: hsl(230, 17%, 14%);
     }
-    .container {
-      background-color: hsl(230, 17%, 14%);
-    }
     .upper-text {
+      color: var(--secondary-color);
       font-size: 28px;
       font-weight: 700;
       color: white;
@@ -39,7 +56,11 @@
       color: hsl(228, 34%, 66%);
       font-weight: 400;
     }
-    
+    .whitemode {
+      background-color: white;
+      color: yellow;
+    }
+
     .darkmode {
       margin-top:10px;
       color: hsl(228, 34%, 66%);
@@ -163,7 +184,7 @@
         <div id="header" class="col s12 m12">
           <div class="upper-text">Social Media Dashboard</div>
           <div class="darkmode">
-            <input id="switch-shadow" class="switch switch--shadow" type="checkbox">Dark Mode</input>
+            <input id="switch-shadow" class="switch switch--shadow" type="checkbox" >Dark Mode</input>
             <label for="switch-shadow"></label>
           </div>
         </div>
@@ -173,7 +194,7 @@
     <main>
       <div class="row">
         <div class="col s12 m3">
-          <div class="card small">
+          <div class="card small hoverable">
             <div class="card-content white-text">
               <div class="card-title"><h6><i class="fab fa-facebook-square"></i> @nathanf</h6></div>
               <div class="card-center"><h1>1987</h1></div>
@@ -183,7 +204,7 @@
           </div>
         </div>
         <div class="col s12 m3">
-          <div class="card small">
+          <div class="card small hoverable">
             <div class="card-content white-text">
               <div class="card-title"><h6><i class="fab fa-twitter-square"></i> @nathanf</h6></div>
               <div class="card-center"><h1>1044</h1></div>
@@ -193,7 +214,7 @@
           </div>
         </div>
         <div class="col s12 m3">
-          <div class="card small">
+          <div class="card small hoverable">
             <div class="card-content white-text">
               <div class="card-title"><h6><i class="fab fa-instagram-square"></i> @realnathanf</h6></div>
               <div class="card-center"><h1>11k</h1></div>
@@ -203,7 +224,7 @@
           </div>
         </div>
         <div class="col s12 m3">
-          <div class="card small">
+          <div class="card small hoverable">
             <div class="card-content white-text">
               <div class="card-title"><h6><i class="fab fa-youtube-square"></i> Nathan F.</h6></div>
               <div class="card-center"><h1>8239</h1></div>
@@ -223,7 +244,7 @@
 
     <div class="row">
       <div class="col s12 m3">
-        <div class="card">
+        <div class="card hoverable">
           <div class="top-card">
             <div class="left-text-up">
               Page Views
@@ -241,7 +262,7 @@
             </div>
           </div>
         </div>
-        <div class="card">
+        <div class="card hoverable">
           <div class="top-card">
             <div class="left-text-up">
               Retweets
@@ -262,7 +283,7 @@
       </div>
 
       <div class="col s12 m3">
-        <div class="card">
+        <div class="card hoverable">
           <div class="top-card">
             <div class="left-text-up">
               Likes
@@ -280,7 +301,7 @@
             </div>
           </div>
         </div>
-        <div class="card">
+        <div class="card hoverable">
           <div class="top-card">
             <div class="left-text-up">
               Likes
@@ -301,7 +322,7 @@
       </div>
 
       <div class="col s12 m3">
-        <div class="card">
+        <div class="card hoverable">
           <div class="top-card">
             <div class="left-text-up">
               Likes
@@ -319,7 +340,7 @@
             </div>
           </div>
         </div>
-        <div class="card">
+        <div class="card hoverable">
           <div class="top-card">
             <div class="left-text-up">
               Likes
@@ -340,7 +361,7 @@
       </div>
 
       <div class="col s12 m3">
-        <div class="card">
+        <div class="card hoverable">
           <div class="top-card">
             <div class="left-text-up">
               Profile Views
@@ -358,7 +379,7 @@
             </div>
           </div>
         </div>
-        <div class="card">
+        <div class="card hoverable">
           <div class="top-card">
             <div class="left-text-up">
               Total Views
@@ -386,6 +407,8 @@
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
     Coded by <a href="https://github.com/isaiasluc">Isaías Lucena</a>.
   </div>
-  <script type="text/javascript" src="js/materialize.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+  
+  
 </body>
 </html>
